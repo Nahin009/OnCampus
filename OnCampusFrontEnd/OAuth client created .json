@@ -1,0 +1,21 @@
+{
+  "web": {
+    "client_id": "646612884662-mugejqko8hqitnt2lt5ltr1mi0g9sr56.apps.googleusercontent.com",
+    "project_id": "oncampus-415810",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_secret": "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",
+    "javascript_origins": [
+      "http://localhost:3000",
+      "http://localhost:5000",
+      "http://localhost:5001",
+      "http://localhost:5002",
+      "http://localhost:5003",
+      "http://localhost:5004",
+      "http://localhost:5005",
+      "http://localhost:3001",
+      "http://localhost:3002"
+    ]
+  }
+}

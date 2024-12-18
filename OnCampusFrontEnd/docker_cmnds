@@ -1,0 +1,22 @@
+docker commit <container_id>  nafiislam964/oncampus:0.0.4.RELEASE
+docker push nafiislam964/oncampus:0.0.4.RELEASE
+
+docker pull nafiislam964/oncampus:0.0.4.RELEASE
+docker run -d -p 4000:8080 -e KEYCLOAK_ADMIN=oncampusbuet@gmail.com -e KEYCLOAK_ADMIN_PASSWORD=admin nafiislam964/oncampus:0.0.4.RELEASE start-dev
+
+done running the container. Hurrah!
+
+for stopping conatainer:
+docker container stop <container_id>
+
+for starting conatainer:
+docker start <container_id>
+
+for getting the container ids:
+docker container ls
+
+#To make keycloak https:
+create pem and key file by openssl
+then chmod 755 apache.key
+docker run -d -p 4000:8443 -e KEYCLOAK_ADMIN=oncampusbuet@gmail.com -e KEYCLOAK_ADMIN_PASSWORD=admin -e KC_HTTPS_CERTIFICATE_FILE=/opt/keycloak/conf/server.crt.pem -e KC_HTTPS_CERTIFICATE_KEY_FILE=/opt/keycloak/conf/server.key.pem -v /etc/apache2/ssl/apache.crt:/opt/keycloak/conf/server.crt.pem -v /etc/apache2/ssl/apache.key:/opt/keycloak/conf/server.key.pem nafiislam964/oncampus:0.0.4.RELEASE start-dev
+
